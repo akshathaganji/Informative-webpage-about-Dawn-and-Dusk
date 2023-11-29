@@ -1,7 +1,7 @@
 function fetchlocation() {
     navigator.geolocation.getCurrentPosition(position => {
         const { latitude, longitude } = position.coords;
-        const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}`;
+        const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today`;
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -13,10 +13,10 @@ function fetchlocation() {
     });
 }
 
-function showtime() {
+function time() {
     const location = document.getElementById('locationInput').value;
     if (location.trim() === '') {
-        alert('Please enter a valid location');
+        alert('Location cannot be null');
         return;
     }
 

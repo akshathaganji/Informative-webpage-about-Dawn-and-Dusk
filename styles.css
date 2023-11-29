@@ -6,30 +6,52 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center;
+    margin: 20px; 
+
+    /* Adjust grid layout for smaller screens */
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+        margin: 10px; 
+    }
 }
 
 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color:crimson red;
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-style: italic;
 }
 
 label {
     font-weight: bold;
+}
+#currentLocationButton
+{
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #searchButton {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: black;
+    color: whitesmoke;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -73,11 +95,6 @@ body {
     background-size: cover;
     background-position: center;
 }
-
-/* Existing CSS styles... */
-
-/* Flexbox styles for positioning Today and Tomorrow side by side */
-
 .results {
     display: flex;
     justify-content: space-between;
@@ -91,6 +108,16 @@ body {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.location-label {
+    font-size: x-large; 
+}
+footer
+{
+    background-color: #333;
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
 }
 
 

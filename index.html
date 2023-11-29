@@ -5,44 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Sunrise and Sunset Times</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Sunrise-Sunset Time</title>
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Sunrise and Sunset Times</h1>
+        <h1>Dawning to Dusk: Capturing the Sun's Passage</h1>
         <button id="currentLocationButton" onclick="fetchlocation()">Current location</button>
         <p><strong><span id="timezone2"></span></strong></p>
         <br>
         <label for="locationInput">Enter Location: </label>
-        <input type="text" id="locationInput" placeholder="e.g., New York City">
-        <button id="searchButton" onclick="showtime()">Search</button>
+        <input type="text" id="locationInput" placeholder="Give a location of your choice">
+        <button id="searchButton" onclick="time()">Search</button>
         <h2 id="place"></h2>
         <div class="results">
             <div id="today" class="day-info">
-                <h2>Today</h2>
-                <p>Sunrise: <span id="sunrise"></span></p>
-                <p>Sunset: <span id="sunset"></span></p>
-                <p>Dawn: <span id="dawn"></span></p>
-                <p>Dusk: <span id="dusk"></span></p>
-                <p>Day-Length: <span id="day_length"></span></p>
-                <p>Solar noon: <span id="solar_noon"></span></p>
-                <p>Time Zone: <span id="timezone"></span></p>
+                <h2><i class="fas fa-calendar-day"></i>  Today</h2>
+                <p><i class="fas fa-sun"></i>Sunrise: <span id="sunrise"></span></p>
+                <p><i class="fas fa-moon"></i>Sunset: <span id="sunset"></span></p>
+                <p><i class="fas fa-cloud-sun"></i> Dawn: <span id="dawn"></span></p>
+                <p><i class="fas fa-cloud-sun"></i>Dusk: <span id="dusk"></span></p>
+                <p><i class="far fa-clock"></i>Day-Length: <span id="day_length"></span></p>
+                <p><i class="far fa-sun"></i>Solar noon: <span id="solar_noon"></span></p>
+                <p><i class="far fa-clock"></i>Time Zone: <span id="timezone"></span></p>
             </div>
             <div id="tomorrow" class="day-info">
-                <h2>Tomorrow</h2>
-                <p>Sunrise: <span id="sunrise1"></span></p>
-                <p>Sunset: <span id="sunset1"></span></p>
-                <p>Dawn: <span id="dawn1"></span></p>
-                <p>Dusk: <span id="dusk1"></span></p>
-                <p>Day-Length: <span id="day_length1"></span></p>
-                <p>Solar noon: <span id="solar_noon1"></span></p>
-                <p>Time Zone: <span id="timezone1"></span></p>
+                <h2><i class="fas fa-calendar-day"></i> Tomorrow</h2>
+                <p><i class="fas fa-sun"></i>Sunrise: <span id="sunrise1"></span></p>
+                <p><i class="fas fa-moon"></i>Sunset: <span id="sunset1"></span></p>
+                <p><i class="fas fa-cloud-sun"></i> Dawn: <span id="dawn1"></span></p>
+                <p><i class="fas fa-cloud-sun"></i>Dusk: <span id="dusk1"></span></p>
+                <p><i class="far fa-clock"></i>Day-Length: <span id="day_length1"></span></p>
+                <p><i class="far fa-sun"></i>Solar noon: <span id="solar_noon1"></span></p>
+                <p><i class="far fa-clock"></i>Time Zone: <span id="timezone1"></span></p>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+<footer>
+    <p>Powered by <a href="https://sunrisesunset.io/api" target="_blank">Sunrise-Sunset API</a></p>
+</footer>
 
 </html>
