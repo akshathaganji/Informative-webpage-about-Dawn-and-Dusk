@@ -9,36 +9,40 @@
 </head>
 
 <body>
+
     <div class="container">
         <h1>Sunrise and Sunset Times</h1>
-         <label for="locationInput">Enter City: </label>
+        <button id="currentLocationButton" onclick="fetchlocation()">Current location</button>
+        <p><strong><span id="timezone2"></span></strong></p>
+        <br>
+        <label for="locationInput">Enter Location: </label>
         <input type="text" id="locationInput" placeholder="e.g., New York City">
         <button id="searchButton" onclick="showtime()">Search</button>
-        
-        <div id="results"></div>
-
-
-        <div id="today">
-            <h2>Today</h2>
-            <p>Sunrise: <strong><span id="sunrise"></span></strong></p>
-            <p>Sunset: <strong><span id="sunset"></span></strong></p>
-            <p>Dawn: <strong><span id="dawn"></span></strong></p>
-            <p>Dusk: <strong><span id="dusk"></span></strong></p>
-            <p>Day Length: <strong><span id="day_length"></span></strong></p>
-            <p>Solar Noon: <strong><span id="solar_noon"></span></strong></p>
-            <p>Timezone: <strong><span id="timezone"></span></strong></p>
-        </div>
-        <div id="Tomorrow">
-            <h2>Tomorrow</h2>
-            <p>Sunrise: <strong><span id="sunrise1"></span></strong></p>
-            <p>Sunset: <strong><span id="sunset1"></span></strong></p>
-            <p>Dawn: <strong><span id="dawn1"></span></strong></p>
-            <p>Dusk: <strong><span id="dusk1"></span></strong></p>
-            <p>Day Length: <strong><span id="day_length1"></span></strong></p>
-            <p>Solar Noon: <strong><span id="solar_noon1"></span></strong></p>
-            <p>Timezone: <strong><span id="timezone1"></span></strong></p>
+        <h2 id="place"></h2>
+        <div class="results">
+            <div id="today" class="day-info">
+                <h2>Today</h2>
+                <p>Sunrise: <span id="sunrise"></span></p>
+                <p>Sunset: <span id="sunset"></span></p>
+                <p>Dawn: <span id="dawn"></span></p>
+                <p>Dusk: <span id="dusk"></span></p>
+                <p>Day-Length: <span id="day_length"></span></p>
+                <p>Solar noon: <span id="solar_noon"></span></p>
+                <p>Time Zone: <span id="timezone"></span></p>
+            </div>
+            <div id="tomorrow" class="day-info">
+                <h2>Tomorrow</h2>
+                <p>Sunrise: <span id="sunrise1"></span></p>
+                <p>Sunset: <span id="sunset1"></span></p>
+                <p>Dawn: <span id="dawn1"></span></p>
+                <p>Dusk: <span id="dusk1"></span></p>
+                <p>Day-Length: <span id="day_length1"></span></p>
+                <p>Solar noon: <span id="solar_noon1"></span></p>
+                <p>Time Zone: <span id="timezone1"></span></p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
