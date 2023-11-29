@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sunrise and Sunset Times</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sunrise and Sunset Times</h1>
+         <label for="locationInput">Enter City: </label>
+        <input type="text" id="locationInput" placeholder="e.g., New York City">
+        <button id="searchButton" onclick="showtime()">Search</button>
+        
+        <div id="results"></div>
+
+
+        <div id="today">
+            <h2>Today</h2>
+            <p>Sunrise: <strong><span id="sunrise"></span></strong></p>
+            <p>Sunset: <strong><span id="sunset"></span></strong></p>
+            <p>Dawn: <strong><span id="dawn"></span></strong></p>
+            <p>Dusk: <strong><span id="dusk"></span></strong></p>
+            <p>Day Length: <strong><span id="day_length"></span></strong></p>
+            <p>Solar Noon: <strong><span id="solar_noon"></span></strong></p>
+            <p>Timezone: <strong><span id="timezone"></span></strong></p>
+        </div>
+        <div id="Tomorrow">
+            <h2>Tomorrow</h2>
+            <p>Sunrise: <strong><span id="sunrise1"></span></strong></p>
+            <p>Sunset: <strong><span id="sunset1"></span></strong></p>
+            <p>Dawn: <strong><span id="dawn1"></span></strong></p>
+            <p>Dusk: <strong><span id="dusk1"></span></strong></p>
+            <p>Day Length: <strong><span id="day_length1"></span></strong></p>
+            <p>Solar Noon: <strong><span id="solar_noon1"></span></strong></p>
+            <p>Timezone: <strong><span id="timezone1"></span></strong></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
